@@ -27,7 +27,7 @@ class UsersApplicationTests {
     }
 
     @Test
-    void testShouldGetfUser() {
+    void testShouldGetUser() {
         RestAssured.get("/users/1").then()
                 .statusCode(200)
                 .body("name", Matchers.equalTo("Ivan"));
