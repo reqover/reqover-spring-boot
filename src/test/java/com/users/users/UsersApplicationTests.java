@@ -1,9 +1,11 @@
 package com.users.users;
 
+import io.reqover.Reqover;
 import io.reqover.rest.assured.SwaggerCoverage;
 import io.restassured.RestAssured;
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +20,11 @@ class UsersApplicationTests {
     public static void configureRestAssured() {
         RestAssured.baseURI = BASE_URI;
         RestAssured.filters(new SwaggerCoverage());
+    }
+
+    @AfterAll
+    public static void after() {
+        Reqover.dumpSpec(BASE_URI + "/api-docs");
     }
 
     @Test

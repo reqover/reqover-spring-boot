@@ -17,7 +17,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.2'
 
-	testImplementation 'com.github.reqover:reqover-java:v0.2.9'
+	testImplementation 'com.github.reqover:reqover-java:v0.3.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.0'
 
